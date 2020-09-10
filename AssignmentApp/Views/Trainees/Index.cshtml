@@ -1,0 +1,80 @@
+﻿@model IEnumerable<AssignmentApp.Models.Trainee>
+
+@{
+    ViewBag.Title = "Trainee Management -";
+    Layout = "~/Views/Shared/Staff_Layout.cshtml";
+}
+
+<h2>Trainee Management</h2>
+
+<p>
+    @Html.ActionLink("Create new Trainee accounts", "Create")
+</p>
+<br />
+<center>
+    @using (Html.BeginForm("Search", "Trainees"))
+    {
+        @Html.Editor("search");
+        <input type="submit" value="Search" class="btn btn-default" />
+    }
+</center>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TraineeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Education)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProgrammingLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TOEIC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExperienceYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TraineeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Education)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProgrammingLanguage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TOEIC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExperienceYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TraineeID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TraineeID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TraineeID })
+            </td>
+        </tr>
+    }
+
+</table>

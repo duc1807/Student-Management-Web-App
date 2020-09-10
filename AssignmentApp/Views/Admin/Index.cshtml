@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/homepage.css?version=1">
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin Home Page</title>
+</head>
+<body>
+    <div id="container">
+        <a href="/admin/staff">
+            <div id="manage-account">
+                <img id="staffimg" src="~/Content/images/staff.png">
+                <h1>Staff management</h1>
+            </div>
+        </a>
+
+        <a href="/admin/tutor">
+            <div id="account">
+                <img id="accountimg" src="~/Content/images/account.png">
+                <h1>Tutor Management</h1>
+            </div>
+        </a>
+
+    </div>
+</body>
+</html>

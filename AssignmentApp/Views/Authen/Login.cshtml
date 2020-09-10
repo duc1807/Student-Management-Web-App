@@ -1,0 +1,49 @@
+﻿@model AssignmentApp.Models.Account
+
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/Content/Index.css">
+<link rel="icon" href="~/Content/images/backgroundsignin.jpg" type="image/x-icon">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+    <div id="login-box">
+        <div class="left">
+            <h1 id="signin">Sign in</h1>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "input" } })
+                            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "input" } })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Login" class="login" />
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <p id="forgot">Forgot your password? <u id="click" onclick="openform()">Click here.</u></p>
+
+        </div>
+
+    </div>
+</body>

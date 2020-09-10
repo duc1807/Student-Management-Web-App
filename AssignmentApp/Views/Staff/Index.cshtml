@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = "~/Views/Shared/Staff_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/staffHomepage.css?version=1" />
+    <title>Staff Home Page</title>
+</head>
+<body>
+    <div id="container">
+        <a href="/Categories/Index">
+            <div id="manage-account">
+                <img style="width: 90px; margin-left:105px; margin-top: 40px" id="staffimg" src="~/Content/images/category.png">
+                <h1>Manage Category</h1>
+            </div>
+        </a>
+
+        <a href="/Courses/Index">
+            <div id="course">
+                <img id="accountimg" style="width: 220px; height: 160px; margin-top: -20px; margin-left: 45px" src="~/Content/images/course.png">
+                <h1 style="margin-top: 8px">Manage Course</h1>
+            </div>
+        </a>
+
+        <a href="/Topics/Index">
+            <div id="topic">
+                <img id="accountimg" src="~/Content/images/topic.png">
+                <h1 style="margin-top: 22px">Manage Topic</h1>
+            </div>
+        </a>
+
+        <a href="/Staff/Tutor">
+            <div id="account">
+                <img style="width:140px; margin-left: 80px" id="accountimg" src="~/Content/images/staff.png">
+                <h1>Manage Tutor</h1>
+            </div>
+        </a>
+
+        <a href="/Trainees/Index">
+            <div id="trainee">
+                <img id="traineeimg" src="~/Content/images/trainee.png">
+                <h1>Manage Trainee</h1>
+            </div>
+        </a>
+
+        <a href="/Enrollments/Index">
+            <div id="enroll">
+                <img id="accountimg" src="~/Content/images/account.png">
+                <h1>Enrollments</h1>
+            </div>
+        </a>
+
+    </div>
+</body>
+</html>
+
+

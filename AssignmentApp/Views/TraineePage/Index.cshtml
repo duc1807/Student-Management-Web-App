@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Trainee HomePage -";
+    Layout = "~/Views/Shared/Trainee_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/TraineePage.css">
+    <meta name="viewport" content="width=device-width" />
+    <title>Trainee Home Page</title>
+</head>
+<body>
+    <div id="container">
+        <a href="/TraineePage/MyCourse">
+            <div id="manage-account">
+                <img id="staffimg" src="~/Content/images/course.png">
+                <h1>View Course</h1>
+            </div>
+        </a>
+
+        <a href="/TraineePage/Profile">
+            <div id="account">
+                <img id="accountimg" src="~/Content/images/account.png">
+                <h1>Profile</h1>
+            </div>
+        </a>
+
+    </div>
+</body>
+</html>
+
+

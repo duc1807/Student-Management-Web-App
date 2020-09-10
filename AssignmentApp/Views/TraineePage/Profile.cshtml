@@ -1,0 +1,82 @@
+﻿@model AssignmentApp.Models.Trainee
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/Trainee_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Profile</title>
+</head>
+<body>
+    <div>
+        <h4>Your Profile</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TraineeName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TraineeName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DoB)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DoB)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Education)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Education)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ProgrammingLanguage)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ProgrammingLanguage)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TOEIC)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TOEIC)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ExperienceYear)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ExperienceYear)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Back", "Index")
+    </p>
+</body>
+</html>
